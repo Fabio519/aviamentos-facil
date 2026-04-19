@@ -441,11 +441,11 @@ app.post("/edit/:id", (req, res) => {
 
 });
 
-// Rodar servidor
-app.listen(3000, () => {
-
-  console.log(
-    "Servidor rodando em http://localhost:3000"
-  );
-
+// Rodar servidor liberado para rede (PC e Celular)
+app.listen(3000, '0.0.0.0', () => {
+  console.log("-----------------------------------------");
+  console.log("SISTEMA DE AVIAMENTOS ATIVO!");
+  console.log("No PC acesse: http://localhost:3000");
+  console.log("No CELULAR acesse: http://192.168.1.192:3000");
+  console.log("-----------------------------------------");
 });
