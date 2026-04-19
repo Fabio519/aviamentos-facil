@@ -441,11 +441,7 @@ app.post("/edit/:id", (req, res) => {
 
 });
 
-// Rodar servidor liberado para rede (PC e Celular)
-app.listen(3000, '0.0.0.0', () => {
-  console.log("-----------------------------------------");
-  console.log("SISTEMA DE AVIAMENTOS ATIVO!");
-  console.log("No PC acesse: http://localhost:3000");
-  console.log("No CELULAR acesse: http://192.168.1.192:3000");
-  console.log("-----------------------------------------");
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, '0.0.0.0', () => {
+    console.log(`Servidor online na porta ${PORT}`);
 });
